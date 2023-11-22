@@ -1,0 +1,66 @@
+.heading {
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    @include sm {
+        padding-top: 15px;
+    }
+    @include mmd {
+        .navbar-toggler {
+            background: #fff;
+            padding: 6px;
+        }
+        .navbar-collapse {
+            background: $bg-black;
+            padding: 25px;
+            & .navbar-nav {
+                & a {
+                    border-bottom: 1px solid #f3f3f321;
+                    padding: 12px 0;
+                }
+            }
+        }
+        & .navbar-nav {
+            display: inherit;
+            & .base-btn {
+                margin-top: 15px;
+                display: inline-block;
+                @include mmd{
+                    padding: 15px 35px !important;
+                    border-bottom: 1px solid $primary !important; 
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+.navbar-nav {
+    & a {
+        display: block;
+        color: $text;
+        font-size: 18px;
+        padding:5px 20px;
+        cursor: pointer;
+        &:hover,
+        &.active,
+        &:focus {
+            color: $primary !important;
+        }
+    }
+    & .base-btn{
+        &:hover{
+            color: #050505 !important;
+        }
+    }
+}
+
+.heading.fixed{
+    position: fixed;
+    background-color: $bg-black;
+    padding: 5px 0;
+    transition: all .3s ease-in-out;
+}

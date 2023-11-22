@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html, html body{
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'PPNeueMachina';
+    src: url('../fonts/neu/NeueMachina-Light.ttf') format('ttf');
+  }
+
+  
+  @font-face {
+    font-family: 'PPNeueMachina';
+    src: url('../fonts/neu/NeueMachina-Light.otf');
+    src: local('☺'),  
+         url('../fonts/neu/NeueMachina-Light.otf') format('truetype'), 
+  }
+  
+  @font-face {
+    font-family: 'PPNeueMachina';
+    src: url('../fonts/neu/NeueMachina-Light.otf');
+    src: local('☺'),  
+         url('../fonts/neu/NeueMachina-Light.otf') format('truetype'), 
+  }
+  
+  @font-face {
+    font-family: 'PPNeueMachina';
+    src: url('../fonts/neu/NeueMachina-Regular.otf');
+    src: local('☺'),  
+         url('../fonts/neu/NeueMachina-Regular.otf') format('truetype'), 
+  }
+  
+  @font-face {
+    font-family: 'PPNeueMachina';
+    src: url('../fonts/neu/NeueMachina-Ultrabold.otf');
+    src: local('☺'),  
+         url('../fonts/neu/NeueMachina-Ultrabold.otf') format('truetype'), 
+  }
+  
+  
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $text;
+    background-color: $t-black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading;
+    font-weight: 700;
+    font-family: 'PPNeueMachina', Arial, Helvetica, sans-serif;
+};
+
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $heading;
+    outline: none;
+    @include transition;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: #f3f3f3;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    @include transition;
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.container {
+    @include xxxl {
+        max-width: 1560px;
+    }
+}
+
+.base {
+    &-btn {
+        display: inline-block;
+        border: 1px solid $primary;
+        border-radius: 5px;
+        color: $t-black;
+        background-color: $primary;
+        padding: 11px 33px;
+        @include font-20;
+        @include sm {
+            font-size: 18px;
+        }
+        &:hover {
+            background-color: transparent;
+            color: $primary;
+        }
+        &.bg-transparent {
+            color: $primary;
+            &:hover {
+                background-color: $primary !important;
+                color: $t-black;
+            }
+        }
+    }
+    &-padding {
+        padding-top: 200px;
+        @include sm{
+            padding-top: 100px;
+        }
+    }
+    &-title {
+        margin-bottom: 60px;
+        & h2 {
+            @include font-70;
+            margin-bottom: 26px;
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        & p {
+            @include font-18;
+        }
+    }
+}
+
+.-mb {
+    &-30 {
+        margin-bottom: -30px;
+    }
+}
+
+.seemore {
+    margin-top: 60px;
+    @include sm {
+        margin-top: 40px;
+    }
+}
+
+.counter-item{
+    h3{
+        font-family: 'Inter', sans-serif;
+    }
+}

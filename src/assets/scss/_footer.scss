@@ -1,0 +1,18 @@
+/* Footer css */
+
+.footer {
+    padding: 60px 0;
+    border-top: 1px solid #111217;
+    padding-bottom: 58px;
+    @include font-24;
+    margin-top: 80px;
+    @include lg {
+        padding: 40px 0;
+    }
+    @include mmd {
+        padding: 30px 0;
+    }
+}
+
+
+/* Footer css */
