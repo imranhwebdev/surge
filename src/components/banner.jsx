@@ -1,26 +1,58 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import bannerImg from '../assets/img/hero-right-img.png'
+import bannerShap0 from '../assets/img/hero-shap-0.png'
+import bannerShap1 from '../assets/img/hero-shap1.png'
+import bannerShap2 from '../assets/img/hero-shap2.png'
 export default function Banner(){
+    const title = "Your <span>Keys</span> <br /> Your <span>Trade</span>";
+    const desc = "A The most dominant, secure and versatile platform allowing you to automate your trading journey";
+    const buttonData = [
+        { 
+            text: 'Buy $SURGE', 
+            link: '#' 
+        },
+        { 
+            text: 'Launch App', 
+            link: '#' 
+        },
+        // Add more buttons as needed
+      ];
     return(
         <div className="banner">
+            <figure className="banner-img">
+                <img src={bannerImg} alt="" />
+            </figure>
             <Container>
                 <Row className='align-items-center'>
                     <Col lg={6}>
                         <div className="banner-content">
-                            <span className='text-primary d-block text-uppercase mb-3 fw-bold'>Treating Security as a Joke</span>
-                            <h1 className='text-white'>Why Treating Security as a Joke is Risky Business.</h1>
-                            <p className="text-white">Treating security as a joke can have serious consequences. With the increasing frequency of cyber attacks and data breaches, it is essential to take security seriously. Failing to do so can result in financial losses, damage to reputation, and even legal consequences.</p>
-                            <a href="#" className="base-btn">Get Service</a>
+                        <figure className="banner__shap0">
+                            <img src={bannerShap0} alt="" />
+                        </figure> 
+                        <h1 dangerouslySetInnerHTML={{ __html: title }} />
+                            <p>{desc}</p>
+                            {buttonData.map((button, index) => (
+                                <a key={index} href={button.link} className="boxed__btn">
+                                    {button.text}
+                                </a>
+                            ))}
                         </div>
                     </Col>
-                    <Col lg={6} className='text-end'>
-                        <div className="banner-img">
+                    <Col lg={6}>
+                        <figure className="responsive_img d-block d-lg-none mt-5">
                             <img src={bannerImg} alt="" />
-                        </div>
+                        </figure>
                     </Col>
-                </Row>
+                </Row>   
             </Container>
+            
+            <figure className="banner__shap1">
+                <img src={bannerShap1} alt="" />
+            </figure> 
+            <figure className="banner__shap2">
+                <img src={bannerShap2} alt="" />
+            </figure> 
         </div>
     )
 }

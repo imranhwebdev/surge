@@ -1,8 +1,10 @@
 import { React } from 'react'
-import Header from './components/header'
-import Banner from './components/banner'
-import Services from './components/Services'
-import Footer from './components/Footer'
+import Header from './components/Header';
+import Banner from './components/banner';
+import Aplications from './components/Aplications';
+import Wallet from './components/Wallet';
+import Trade from './components/Trade';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -10,7 +12,9 @@ function App() {
     <>
       <Header />
       <Banner />
-      <Services />
+      <Aplications />
+      <Wallet />
+      <Trade />
       <Footer />
     </>
   )
