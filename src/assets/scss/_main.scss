@@ -38,6 +38,9 @@
             @include font-120;
             margin-bottom: 50px;
             line-height: 1.3;
+            @include mmd{
+                line-height: 1.6;
+            }
         }
         & p {
             margin-bottom: 40px;
@@ -201,6 +204,10 @@
         border-bottom: 3px solid rgba(0, 0, 0, 0.20);
         background: $_212B3A;
         padding: 26px 50px 31px;
+        @include mmd{
+            border-radius: 15px;
+            padding: 30px 30px 30px;
+        }
         & h3{
             margin-bottom: 20px;
         }
@@ -225,6 +232,14 @@
         }
        
         max-width: 700px;
+        @include mmd{
+            margin-top: 30px;
+            max-width: 500px;
+        }
+        @include mmd{
+            margin-top: 30px;
+            max-width: 400px;
+        }
     }
     & .section__title{
         margin-bottom: 78px;
@@ -238,7 +253,91 @@
 .trade__area{
     & .section__title{
         max-width: 790px;
-        margin: 0 auto;
+        margin: 0 auto 50px;
+    }
+    & .trade__wrapper {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        & .single__trade__item {
+            border-radius: 42px;
+            background: #212B3A;
+            padding: 44px 50px 80px;
+            width: calc(50% - 30px);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & h3{
+                margin-bottom: 24px;
+                @include sm{
+                    margin-bottom: 15px;
+                }
+            }
+            & p{
+                color: $_color_0_70;
+                @include font-22;
+                text-transform: capitalize;
+                font-weight: 400;
+            }
+            @include sm{
+                width: 100% !important;
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 30px;
+                padding: 30px 30px 30px;
+                border-radius: 15px;
+            }
+            & .trade__Img {
+                text-align: center;
+                margin-top: 60px;
+                margin-bottom: 0;
+                max-width: 200px;
+                @include mmd{
+                    max-width: 150px;
+                    margin-top: 30px;
+                }
+                @include sm{
+                    max-width: 100px;
+                    margin-top: 0px;
+                }
+            }
+        }
+        & .single__trade__item:nth-child(3) {
+            width: 100% !important;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 140px;
+            padding-bottom: 140px;
+            padding-left: 160px;
+            padding-right: 160px;
+            @include mmd{
+                padding: 80px 80px 80px;
+            }
+            @include sm{
+                padding: 30px 30px 30px;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: start;
+            }
+            & .trade__content{
+                max-width: 615px;
+            }
+            & .trade__Img{
+                text-align: center;
+                margin-top: 0;
+                width: 100%;
+                @include sm{
+                    margin-top: 0px;
+                    margin-right: auto;
+                }
+            }
+        }
     }
 }
+
+
+
+
 /* trade__area CSS */

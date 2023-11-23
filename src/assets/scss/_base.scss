@@ -33,6 +33,7 @@ h6 {
 
 h1{
     @include font-120;
+    line-height: 1.4
 }
 h2{
     @include font-54;

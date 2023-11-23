@@ -17,17 +17,17 @@ export default function Wallet(){
             </Container>
             <Container>
                 <Row className='align-items-center'>
-                   <Col lg='6'>
+                   <Col md='6'>
                         <div className="wallet_single_box">
                             <h3>{Title}</h3>
                             <p>{Desc}</p>
                             <a href={Btnlink} className='inline__btn'>{BtnText}</a>
                         </div>
                    </Col>
-                   <Col lg='6'>
-                    <figure className='w_i'>
-                        <img src={WalletRightImg} alt="Wallet Image" />
-                    </figure>
+                   <Col md='6'>
+                        <figure className='w_i'>
+                            <img src={WalletRightImg} alt="Wallet Image" />
+                        </figure>
                    </Col>
                 </Row>
             </Container>

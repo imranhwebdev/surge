@@ -19,18 +19,17 @@
             & .navbar-nav {
                 & a {
                     border-bottom: 1px solid #f3f3f321;
-                    padding: 12px 0;
+                    padding: 15px 0;
                 }
             }
         }
         & .navbar-nav {
             display: inherit;
-            & .base-btn {
+            & .boxed__btn {
                 margin-top: 15px;
                 display: inline-block;
                 @include mmd{
                     padding: 15px 35px !important;
-                    border-bottom: 1px solid $primary !important; 
                     margin-top: 20px;
                 }
             }
@@ -62,7 +61,7 @@
         display: inline-block;
         @include font-16;
         font-weight: 500;
-        margin-left: 16px;
+        margin-right: 16px;
         opacity: 1;
         &:hover{
             border: 1.5px solid $primary;
