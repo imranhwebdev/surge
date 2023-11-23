@@ -1,5 +1,5 @@
 import { React } from 'react'
-import Header from './components/Header';
+import Header from './components/header';
 import Banner from './components/banner';
 import Aplications from './components/Aplications';
 import Wallet from './components/Wallet';
