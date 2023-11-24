@@ -144,6 +144,7 @@ input::-webkit-inner-spin-button {
 .section__title{
     & h2{
         margin-bottom: 20px;
+        text-transform: capitalize;
     }
     & p{
         @include font-25;

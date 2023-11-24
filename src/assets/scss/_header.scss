@@ -10,7 +10,7 @@
     }
     @include mmd {
         .navbar-toggler {
-            background: #fff;
+            background: $primary;
             padding: 6px;
         }
         .navbar-collapse {

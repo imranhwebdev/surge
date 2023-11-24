@@ -42,7 +42,7 @@ export default function IndustrylUX(){
                         </div>
                         {industryluxItems.map((industryluxItem, index)=>(
                             <div className="single__industrylux__item">
-                                <a href={industryluxItem.btnLink} className='btn'>{industryluxItem.btnTxt}</a>
+                                <a target='_target' href={industryluxItem.btnLink} className='btn'>{industryluxItem.btnTxt}</a>
                                 <p>{industryluxItem.desc}</p>
                             </div>
                         ))}

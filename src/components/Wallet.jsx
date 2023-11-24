@@ -21,7 +21,7 @@ export default function Wallet(){
                         <div className="wallet_single_box">
                             <h3>{Title}</h3>
                             <p>{Desc}</p>
-                            <a href={Btnlink} className='inline__btn'>{BtnText}</a>
+                            <a target='_blank' href={Btnlink} className='inline__btn'>{BtnText}</a>
                         </div>
                    </Col>
                    <Col md='6'>

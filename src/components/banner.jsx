@@ -33,7 +33,7 @@ export default function Banner(){
                         <h1 dangerouslySetInnerHTML={{ __html: title }} />
                             <p>{desc}</p>
                             {buttonData.map((button, index) => (
-                                <a key={index} href={button.link} className="boxed__btn">
+                                <a target='_target' key={index} href={button.link} className="boxed__btn">
                                     {button.text}
                                 </a>
                             ))}

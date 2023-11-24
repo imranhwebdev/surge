@@ -38,13 +38,13 @@ export default function Comunity(){
                 <Row className="comunity__wrapper">
                     {
                         ComunityItems.map((ComunityItem, index)=>(
-                        <Col lg='6' key={index}>
+                        <Col lg='6' key={index} className='mb-4'>
                             <div className="single__comunity__item">
                                 <div className="comunity__content">
                                     <span>{ComunityItem.subTitle}</span>
                                     <h3>{ComunityItem.title}</h3>
                                     <p>{ComunityItem.desc}</p>
-                                    <a href={ComunityItem.btnLink} className='inline__btn'>{ComunityItem.btnText}</a>
+                                    <a target='_blank' href={ComunityItem.btnLink} className='inline__btn'>{ComunityItem.btnText}</a>
                                     {ComunityItem.btnTextTwo && ComunityItem.btnLinkTwo && (
                                         <a href={ComunityItem.btnLinkTwo} className='inline__btn'>{ComunityItem.btnTextTwo}</a>
                                     )}
