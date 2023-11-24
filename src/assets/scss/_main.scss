@@ -450,6 +450,7 @@
         margin-bottom: 95px;
     }
     & .single__comunity__item{
+        height: 100%;
         @include border__radius__42;
         background: $_212B3A;
         padding: 50px 46px 37px;
