@@ -41,7 +41,7 @@ export default function IndustrylUX(){
                             <p>{sectionDesc}</p>
                         </div>
                         {industryluxItems.map((industryluxItem, index)=>(
-                            <div className="single__industrylux__item">
+                            <div className="single__industrylux__item" key={index}>
                                 <a target='_target' href={industryluxItem.btnLink} className='btn'>{industryluxItem.btnTxt}</a>
                                 <p>{industryluxItem.desc}</p>
                             </div>

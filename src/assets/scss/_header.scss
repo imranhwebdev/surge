@@ -32,6 +32,11 @@
                     padding: 15px 35px !important;
                     margin-top: 20px;
                 }
+                @include sm{
+                    padding: 15px 25px !important;
+                    margin-top: 20px;
+                    margin-right: 8px;
+                }
             }
         }
     }
@@ -76,4 +81,5 @@
     background-color: $_141C24;
     padding: 10px 0;
     transition: all .3s ease-in-out;
+    box-shadow: rgba(194, 194, 194, 0.03) 0px 3px 5px;
 }

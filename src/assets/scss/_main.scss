@@ -477,7 +477,7 @@
     padding-bottom: 95px;
     @include sm{
         padding-top: 70px;
-        padding-bottom: 70px;
+        padding-bottom: 35px;
     }
     & .section__title{
         margin-bottom: 95px;
@@ -555,8 +555,16 @@
 /* Faq__area CSS */
 .faq__area{
     padding-top: 90px;
+    padding-bottom: 90px;
+    @include sm{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
     & .section__title{
         margin-bottom: 70px;
+        @include sm{
+            margin-bottom: 45px;
+        }
     }
     & .accordion-item {
         margin-bottom: 15px;
@@ -564,6 +572,10 @@
         background: $_212B3A;
         border: 0;
         padding:28px 40px;
+        @include sm{
+            padding:20px 10px;
+            border-radius: 10px !important;
+        }
         & .accordion-button{
             padding-bottom: 0;
             padding-top: 0px;
@@ -580,6 +592,9 @@
             line-height: 170%;
             padding-bottom: 0;
             max-width: 82%;
+            @include sm{
+                max-width: 100%;
+            }
         }
     }
     & .accordion{
