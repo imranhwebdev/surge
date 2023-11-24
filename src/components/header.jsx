@@ -28,7 +28,7 @@ export default function Header(){
                         <Link to="wallet" spy={true} smooth={true} offset={50} duration={500}>Wallet</Link>
                         <Link to="trade" spy={true} smooth={true} offset={50} duration={500}>Trade</Link>
                         <Link to="snipe" spy={true} smooth={true} offset={50} duration={500}>Snipe</Link>
-                        <Link to="community" spy={true} smooth={true} offset={50} duration={500}>Community</Link>
+                        <Link to="comunity" spy={true} smooth={true} offset={50} duration={500}>Community</Link>
                         <Link to="faq" spy={true} smooth={true} offset={50} duration={500}>FAQ</Link>
                     </Nav>
                     <Nav>

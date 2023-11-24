@@ -1,6 +1,12 @@
 @mixin transition {
     transition: all .3s ease-in-out;
 }
+@mixin border__radius__42 {
+    border-radius: 42px;
+    @include sm{
+        border-radius: 15px;
+    }
+}
 
 
 @mixin font-120 {
