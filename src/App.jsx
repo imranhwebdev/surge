@@ -5,6 +5,7 @@ import Aplications from './components/Aplications';
 import Wallet from './components/Wallet';
 import Trade from './components/Trade';
 import Snipe from './components/Snipe';
+import IndustrylUX from './components/IndustrylUX';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Wallet />
       <Trade />
       <Snipe />
+      <IndustrylUX />
       <Footer />
     </>
   )

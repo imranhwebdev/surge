@@ -35,7 +35,7 @@ export default function Snipe(){
                 <Row className="snipe__wrapper">
                     {
                         snipeItems.map((snipeItem, index)=>(
-                        <Col lg='4' key={index}>
+                        <Col lg='4' md='6' key={index}>
                             <div className="single__snipe__item text-center">
                                 <figure className='snipe__Img'>
                                     <img src={snipeItem.img} alt="Snipe image" />
