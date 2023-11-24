@@ -4,6 +4,7 @@ import Banner from './components/banner';
 import Aplications from './components/Aplications';
 import Wallet from './components/Wallet';
 import Trade from './components/Trade';
+import Snipe from './components/Snipe';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Aplications />
       <Wallet />
       <Trade />
+      <Snipe />
       <Footer />
     </>
   )

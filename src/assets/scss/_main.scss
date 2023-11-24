@@ -251,6 +251,8 @@
 
 /* trade__area CSS */
 .trade__area{
+    padding-top: 50px;
+    padding-bottom: 88px;
     & .section__title{
         max-width: 790px;
         margin: 0 auto 50px;
@@ -293,6 +295,8 @@
                 margin-top: 60px;
                 margin-bottom: 0;
                 max-width: 200px;
+                margin-left: auto;
+                margin-right: auto;
                 @include mmd{
                     max-width: 150px;
                     margin-top: 30px;
@@ -300,6 +304,8 @@
                 @include sm{
                     max-width: 100px;
                     margin-top: 0px;
+                    margin-left: 0;
+                    
                 }
             }
         }
@@ -336,8 +342,42 @@
         }
     }
 }
-
-
-
-
 /* trade__area CSS */
+
+
+/* snipe__area CSS */
+.snipe__area{
+    padding-top: 88px;
+    & .section__title{
+        max-width: 746px;
+        margin: 0 auto 55px;
+    }
+    & .single__snipe__item{
+        border-radius: 42px;
+        background: $_212B3A;
+        padding:70px 35px 30px;
+        height: 100%;
+        margin-bottom: 30px;
+        @include sm{
+            padding-top: 30px;
+        }
+        & h3{
+            margin-bottom: 25px;
+        }
+        & p{
+            color: $_color_0_70;
+            text-transform: capitalize;
+        }
+        & .snipe__Img{
+            max-width: 150px;
+            margin:0px auto 32px;
+        }
+    }
+    & .row{
+        & .col-lg-4{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/* snipe__area CSS */
