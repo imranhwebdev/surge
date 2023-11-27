@@ -8,6 +8,12 @@
     @include sm {
         padding-top: 15px;
     }
+    & .header__logo{
+        min-width: 357px;
+        @include lg{
+            min-width: 150px;
+        }
+    }
     @include mmd {
         .navbar-toggler {
             background: $primary;
@@ -43,6 +49,9 @@
     & .container{
         max-width: 1600px;
     }
+    & .navbar-brand{
+        max-width: 136px;
+    }
 }
 
 .navbar-nav {
@@ -68,6 +77,7 @@
         font-weight: 500;
         margin-right: 16px;
         opacity: 1;
+        background-color: #141C24;
         &:hover{
             border: 1.5px solid $primary;
             box-shadow: 1px 0px 10px 0px $primary;

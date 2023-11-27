@@ -25,7 +25,7 @@ export default function Banner(){
             </figure>
             <Container>
                 <Row className='align-items-center'>
-                    <Col lg={6}>
+                    <Col lg={7}>
                         <div className="banner-content">
                         <figure className="banner__shap0">
                             <img src={bannerShap0} alt="" />

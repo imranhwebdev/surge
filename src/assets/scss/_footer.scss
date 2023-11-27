@@ -15,10 +15,17 @@
             @include font-16;
 
         }
+        & .footer__logo{
+            max-width: 181px;
+        }
     }
     & .footer_top_right{
        & h5{
+            font-family: 'Satoshi-Medium';
             margin-bottom: 20px;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 160%;
         }
         & ul{
            & li{

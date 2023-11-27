@@ -19,9 +19,11 @@ export default function Header(){
         <header className={fix ? 'heading fixed' : 'heading'}>
             <Navbar collapseOnSelect expand="lg">
                 <Container>
-                    <Navbar.Brand href="/">
-                        <img src={logo} alt="" />
-                    </Navbar.Brand>
+                    <div className="header__logo">
+                        <Navbar.Brand href="/">
+                            <img src={logo} alt="" />
+                        </Navbar.Brand>
+                    </div>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto">

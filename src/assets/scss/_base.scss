@@ -2,19 +2,48 @@ html, html body{
     overflow-x: hidden;
 }
 
-@font-face {
+  @font-face {
     font-family: 'Satoshi-Variable';
     src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
         url('../fonts/Satoshi-Variable.woff') format('woff'),
         url('../fonts/Satoshi-Variable.ttf') format('truetype');
-        font-weight: 300 900;
-        font-display: swap;
-        font-style: normal;
   }
   
+  @font-face {
+    font-family: 'Satoshi-Light';
+    src: url('../fonts/Satoshi-Light.woff2') format('woff2'),
+        url('../fonts/Satoshi-Light.woff') format('woff'),
+        url('../fonts/Satoshi-Light.ttf') format('truetype');
+    font-weight: 300; /* Regular */
+  }
+  
+  @font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('../fonts/Satoshi-Regular.woff2') format('woff2'),
+        url('../fonts/Satoshi-Regular.woff') format('woff'),
+        url('../fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+  }
+
+  @font-face {
+    font-family: 'Satoshi-Medium';
+    src: url('../fonts/Satoshi-Medium.woff2') format('woff2'),
+        url('../fonts/Satoshi-Medium.woff') format('woff'),
+        url('../fonts/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+  }
+  
+
+  @font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('../fonts/Satoshi-Bold.woff') format('woff'),
+        url('../fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold */
+  }
   
 body {
-    font-family: 'Satoshi-Variable';
+    font-family: 'Satoshi-Regular';
     @include font-20;
     font-weight: 400;
     line-height: 1.6;
@@ -28,7 +57,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+    font-family: 'Satoshi-Bold';
+    font-weight: bold;
 };
 
 h1{
@@ -107,6 +137,7 @@ input::-webkit-inner-spin-button {
 }
 
 .boxed__btn, .inline__btn {
+    font-family: 'Satoshi-Medium';
     display: inline-block;
     border: 1.5px solid transparent;
     border-radius: 40px;
@@ -143,7 +174,7 @@ input::-webkit-inner-spin-button {
 }
 .section__title{
     & h2{
-        margin-bottom: 20px;
+        margin-bottom: 28px;
         text-transform: capitalize;
     }
     & p{

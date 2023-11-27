@@ -27,7 +27,7 @@ export default function Aplications(){
             </Container>
             <div className="aplication__box">
             <Container>
-                <Row className='justify-content-center'>
+                <Row className='space-evenly'>
                     {aplicationsData.map((aplication, index) => (
                         <Col md={5} key={index}>
                           <div className="single__aplication__box text-center">

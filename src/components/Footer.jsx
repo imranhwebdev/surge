@@ -1,7 +1,7 @@
 import { React } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { FaPaperPlane, FaDiscord, FaGithub } from "react-icons/fa";
-import siteLogo from '../assets/img/Logo.svg';
+import siteLogo from '../assets/img/Footer-Logo.svg';
 import twitterX from '../assets/img/twitter_x.svg';
 export default function Footer(){
     const footerLeftDesc = 'A dedicated and secure platform allowing you to automate your trading journey';
@@ -33,7 +33,7 @@ export default function Footer(){
                 <Row className='footer_top'>
                     <Col sm='6' className='text-sm-start text-center'>
                        <div className="footer_top_left ">
-                            <a href="/">
+                            <a href="/" className='footer__logo'>
                                 <img src={siteLogo} alt="Footer Logo" />
                             </a>
                             <p>{footerLeftDesc}</p>
