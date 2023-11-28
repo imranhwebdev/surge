@@ -1,7 +1,10 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import SectionTitle from './SectionTitle';
-import ComunitytemImg1 from '../assets/img/comunity_medium.svg';
+import ComunityItemImg1 from '../assets/img/comunity_medium.svg';
+import ComunityItemIcon from '../assets/img/comunity_btn_icon.svg';
+import ComunityItemTelegramIcon from '../assets/img/tlegram_icon.svg';
+import ComunityItemTwitterIcon from '../assets/img/twitter_x.svg';
 import ComunityItemImg2 from '../assets/img/Community.svg';
 export default function Comunity(){
     const ComunityItems = [
@@ -12,8 +15,8 @@ export default function Comunity(){
             desc:'Get the latest news, updates, and developments from our team by visiting our Medium page. We regularly publish interesting content that will keep you informed and engaged.',
             btnText:'Medium',
             btnLink:'https://www.google.com',
-            btnIcon: ' ',
-            img:ComunitytemImg1,
+            btnIcon: ComunityItemIcon,
+            img: ComunityItemImg1,
         },
         {
             id:2,
@@ -22,10 +25,10 @@ export default function Comunity(){
             desc:'Join the community on our official Discord/Telegram channels and take part in our team AMA’s, regular contents and giveaways!',
             btnText:'Telegram',
             btnLink:'https://www.telegram.com',
-            btnIcon: ' ',
+            btnIcon: ComunityItemTelegramIcon,
             btnTextTwo:'Twitter',
             btnLinkTwo:'https://www.twitter.com',
-            btnIconTwo: ' ',
+            btnIconTwo: ComunityItemTwitterIcon,
             img:ComunityItemImg2,
         },
     ]
@@ -44,9 +47,9 @@ export default function Comunity(){
                                     <span>{ComunityItem.subTitle}</span>
                                     <h3>{ComunityItem.title}</h3>
                                     <p>{ComunityItem.desc}</p>
-                                    <a target='_blank' href={ComunityItem.btnLink} className='inline__btn'>{ComunityItem.btnText}</a>
+                                    <a target='_blank' href={ComunityItem.btnLink} className='inline__btn'> <img src={ComunityItem.btnIcon} alt="" />{ComunityItem.btnText}</a>
                                     {ComunityItem.btnTextTwo && ComunityItem.btnLinkTwo && (
-                                        <a href={ComunityItem.btnLinkTwo} className='inline__btn'>{ComunityItem.btnTextTwo}</a>
+                                        <a href={ComunityItem.btnLinkTwo} className='inline__btn'><img src={ComunityItem.btnIconTwo} alt="" />  {ComunityItem.btnTextTwo}</a>
                                     )}
 
                                 </div>
