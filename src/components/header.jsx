@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -14,7 +14,14 @@ export default function Header(){
             setFix(false)
         }
     }
-    window.addEventListener("scroll", setFixed)
+    useEffect(() => {
+        window.addEventListener('scroll', setFixed);
+    
+        // Cleanup the event listener on component unmount
+        return () => {
+          window.removeEventListener('scroll', setFixed);
+        };
+      }, []);
     return(
         <header className={fix ? 'heading fixed' : 'heading'}>
             <Navbar collapseOnSelect expand="lg">
@@ -27,11 +34,11 @@ export default function Header(){
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto">
-                        <Link to="wallet" spy={true} smooth={true} offset={50} duration={500}>Wallet</Link>
-                        <Link to="trade" spy={true} smooth={true} offset={50} duration={500}>Trade</Link>
-                        <Link to="snipe" spy={true} smooth={true} offset={50} duration={500}>Snipe</Link>
-                        <Link to="comunity" spy={true} smooth={true} offset={50} duration={500}>Community</Link>
-                        <Link to="faq" spy={true} smooth={true} offset={50} duration={500}>FAQ</Link>
+                        <Link to="wallet" spy={true} smooth={true}  offset={fix ? -70 : 50} duration={500}>Wallet</Link>
+                        <Link to="trade" spy={true} smooth={true}  offset={fix ? -70 : 50} duration={500}>Trade</Link>
+                        <Link to="snipe" spy={true} smooth={true} offset={fix ? -70 : 50} duration={500}>Snipe</Link>
+                        <Link to="comunity" spy={true} smooth={true}  offset={fix ? -70 : 50} duration={500}>Community</Link>
+                        <Link to="faq" spy={true} smooth={true}  offset={fix ? -70 : 50} duration={500}>FAQ</Link>
                     </Nav>
                     <Nav>
                         <a href="/" className='boxed__btn'>Buy $SURGE</a>

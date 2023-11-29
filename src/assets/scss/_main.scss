@@ -270,7 +270,7 @@
             margin-right: -10%;
         }
        
-        max-width: 700px;
+        max-width: 650px;
         @include mmd{
             margin-top: 30px;
             max-width: 500px;
@@ -674,7 +674,13 @@
         @include transition;
     }
 }
+h2.accordion-header {
+    background: transparent !important;
+}
 
+button.accordion-button {
+    background: transparent !important;
+}
 /* Faq__area CSS */
 
 
