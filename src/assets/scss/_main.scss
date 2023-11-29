@@ -279,6 +279,9 @@
             margin-top: 70px;
             max-width: 400px;
         }
+        & img{
+            transition: all .3s ease-in-out;
+        }
     }
     & .section__title{
         margin-bottom: 78px;
@@ -683,4 +686,67 @@ button.accordion-button {
 }
 /* Faq__area CSS */
 
+.all_click_icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 466px;
+    height: 466px;
+    transform: translate(-47%, -48%);
+}
 
+figure.w_i {
+    position: relative;
+}
+
+.all_click_icons .sc {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 84px;
+    height: 84px;
+    margin-top: -51px;
+    text-align: center;
+    line-height: 84px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.all_click_icons .ss {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 84px;
+    height: 84px;
+    margin-left: -51px;
+    text-align: center;
+    line-height: 84px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.all_click_icons .au {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 84px;
+    height: 84px;
+    margin-top: -51px;
+    text-align: center;
+    line-height: 84px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.all_click_icons .eff {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 84px;
+    height: 84px;
+    margin-left: -51px;
+    text-align: center;
+    line-height: 84px;
+    border-radius: 50%;
+    opacity: 0;
+}
