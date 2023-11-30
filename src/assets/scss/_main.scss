@@ -262,10 +262,6 @@
         position: relative;
         z-index: 1;
         margin-bottom: 0;
-        @include xxxl{
-            margin-left: 1%;
-            margin-right: -10%;
-        }
        
         @include xxl{
             margin-left: 10%;
@@ -283,6 +279,7 @@
         }
         & img{
             transition: all .3s ease-in-out;
+
         }
     }
     & .section__title{
@@ -294,10 +291,10 @@
 }
 .eip {
     position: absolute;
-    width: max-content;
+    max-width:40% ;
     left: 50%;
     top: 50%;
-    margin-left: -30px;
+    transform: translate(-50%, -50%);
 }
 /* aplication__area CSS */
 
@@ -693,43 +690,32 @@ h2.accordion-header {
 button.accordion-button {
     background: transparent !important;
 }
-/* Faq__area CSS */
 
+/* Faq__area CSS */
 .all_click_icons {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     height: 100%;
-    transform: translate(-50%, -50%) scale(.71) ;
+    transform: translate(-50%, -50%);
+
 }
 @media(max-width:1200px) and (min-width:992px){
     .all_click_icons {
         transform: translate(-50%, -50%);
     }
 }
-@media(max-width:992px) and (min-width:768px){
-    .all_click_icons {
-        width: 400px;
-        height: 400px;
-        transform: translate(-50%, -50%);
-    }
-}
-@media(max-width:767px){
-    .all_click_icons {
-        width: 360px;
-        height: 360px;
-        transform: translate(-50%, -50%);
-    }
-}
+
 figure.w_i {
     position: relative;
 }
 
+
 .all_click_icons .sc {
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: 52%;
+    left: 103px;
     width: 84px;
     height: 84px;
     margin-top: -51px;
@@ -737,12 +723,16 @@ figure.w_i {
     line-height: 84px;
     border-radius: 50%;
     opacity: 0;
+    @include mmd{
+        top: 51%;
+        left: 28px;
+    }
 }
 
 .all_click_icons .ss {
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: 87px;
+    left: 52%;
     width: 84px;
     height: 84px;
     margin-left: -51px;
@@ -750,12 +740,16 @@ figure.w_i {
     line-height: 84px;
     border-radius: 50%;
     opacity: 0;
+    @include mmd{
+        left: 51%;
+        bottom: 18px;
+    }
 }
 
 .all_click_icons .au {
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: 51%;
+    right: 79px;
     width: 84px;
     height: 84px;
     margin-top: -51px;
@@ -763,12 +757,16 @@ figure.w_i {
     line-height: 84px;
     border-radius: 50%;
     opacity: 0;
+    @include mmd{
+        top: 51%;
+        right: 38px;
+    }
 }
 
 .all_click_icons .eff {
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 97px;
+    left: 52%;
     width: 84px;
     height: 84px;
     margin-left: -51px;
@@ -776,4 +774,8 @@ figure.w_i {
     line-height: 84px;
     border-radius: 50%;
     opacity: 0;
+    @include mmd{
+        left: 50%;
+        top: 20px;
+    }
 }

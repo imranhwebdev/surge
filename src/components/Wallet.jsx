@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
-import { Col, Container, Row, Tab, Nav } from 'react-bootstrap'
-import SectionTitle from './SectionTitle'
+import { Col, Container, Row, Tab, Nav } from 'react-bootstrap';
+import SectionTitle from './SectionTitle';
 import WalletRightImg from '../assets/img/trading_wallet_right-img.png';
-export default function Wallet(){
+import Eip from '../assets/img/eip.png';
+import key from '../assets/img/key.png';
+import eip_arrow from '../assets/img/eip_arrow.png';
+import self from '../assets/img/self-icon.png';
+import automation from '../assets/img/automation_icon.png';
+
+export default function Wallet() {
     const Title = 'Security';
     const Desc ='Your Assets, Your Control. We never store your private keys.';
     const BtnText ='Read More';
@@ -20,7 +26,6 @@ export default function Wallet(){
     const BtnText4 ='Read More';
     const Btnlink4 ='https://google.com';
 
-
     const [rotationAngle, setRotationAngle] = useState('0deg');
 
     const handleTabClick = (tabKey) => {
@@ -28,12 +33,12 @@ export default function Wallet(){
         let newRotationAngle = '0deg';
 
         switch (tabKey) {
-            case 'frist':
+            case 'first':
                 newRotationAngle = '0deg';
                 break;
-                case 'second':
-                    newRotationAngle = '90deg';
-                    break;
+            case 'second':
+                newRotationAngle = '90deg';
+                break;
             case 'third':
                 newRotationAngle = '180deg';
                 break;
@@ -48,7 +53,46 @@ export default function Wallet(){
 
         setRotationAngle(newRotationAngle);
     };
-    return(
+
+    const customStyles = {
+        marginTop: 
+            rotationAngle === '0deg' ? '-9px' :
+            rotationAngle === '90deg' ? '-20px' :
+            rotationAngle === '180deg' ? '15px' :
+            rotationAngle === '270deg' ? '21px' : '0px',
+    
+        marginLeft: 
+            rotationAngle === '0deg' ? '-12px' :
+            rotationAngle === '90deg' ? '7px' :
+            rotationAngle === '180deg' ? '10px' :
+            rotationAngle === '270deg' ? '-8px' : '0px',            
+    };
+    const mediaQueryStyles = {
+        '@media (max-width: 992px)': {
+            // Apply styles for devices with a maximum width of 992px
+            marginTop: 
+                rotationAngle === '0deg' ? '-5px' :
+                rotationAngle === '90deg' ? '-9px' :
+                rotationAngle === '180deg' ? '15px' :
+                rotationAngle === '270deg' ? '21px' : '0px',
+        
+            marginLeft: 
+                rotationAngle === '0deg' ? '-5px' : 
+                rotationAngle === '90deg' ? '-12px' :
+                rotationAngle === '180deg' ? '10px' :
+                rotationAngle === '270deg' ? '-8px' : '0px',
+        },
+    };
+    
+
+    const combinedStyles = {
+        transform: `rotate(${rotationAngle})`,
+        transition: 'transform 0.5s ease-in-out',
+        ...customStyles, // Include the custom styles
+        ...mediaQueryStyles,
+    };
+
+    return (
         <div className="wallet__area" id='wallet'>
             <Container>
                 <SectionTitle 
@@ -96,29 +140,30 @@ export default function Wallet(){
                                 <img
                                     src={WalletRightImg}
                                     alt="Wallet Image"
-                                    style={{ transform: `rotate(${rotationAngle})`, transition: 'transform 0.5s ease-in-out' }}
+                                    style={combinedStyles}
                                 />
-                                <div className="all_click_icons" style={{ transform: `translate(-47%, -48%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }}>
+                                <div className="all_click_icons" style={{ transform: `translate(-50%, -50%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }}>
                                     <Nav.Link eventKey="first" className='sc' onClick={() => handleTabClick('first')}>
-                                        sc
+                                        <img src={key} alt="" />
                                     </Nav.Link>
                                     <Nav.Link eventKey="second" className='ss' onClick={() => handleTabClick('second')}>
-                                        ss
+                                    <img src={eip_arrow} alt="" />
                                     </Nav.Link>
                                     <Nav.Link eventKey="third" className='au' onClick={() => handleTabClick('third')}>
-                                        au
+                                    <img src={automation} alt="" />
                                     </Nav.Link>
                                     <Nav.Link eventKey="four" className='eff' onClick={() => handleTabClick('four')}>
-                                        eff
+                                    <img src={self} alt="" />
                                     </Nav.Link>
                                 </div>
-                                <span className='eip'>EIP 4337</span>
+                                <span className='eip'>
+                                    <img src={Eip} alt="" />
+                                </span>
                             </figure>
                         </Col>
                     </Row>
                 </Tab.Container>
             </Container>
-           
         </div>
     );
 }
