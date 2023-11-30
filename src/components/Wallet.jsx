@@ -109,6 +109,7 @@ export default function Wallet(){
                                         eff
                                     </Nav.Link>
                                 </div>
+                                <span className='eip'>EIP 4337</span>
                             </figure>
                         </Col>
                     </Row>
