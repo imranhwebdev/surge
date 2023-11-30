@@ -28,14 +28,17 @@ export default function Wallet(){
         let newRotationAngle = '0deg';
 
         switch (tabKey) {
-            case 'second':
-                newRotationAngle = '90deg';
+            case 'frist':
+                newRotationAngle = '0deg';
                 break;
+                case 'second':
+                    newRotationAngle = '90deg';
+                    break;
             case 'third':
                 newRotationAngle = '180deg';
                 break;
             case 'four':
-                newRotationAngle = '360deg';
+                newRotationAngle = '270deg';
                 break;
             // Add more cases for additional tabs if needed
 
@@ -95,7 +98,7 @@ export default function Wallet(){
                                     alt="Wallet Image"
                                     style={{ transform: `rotate(${rotationAngle})`, transition: 'transform 0.5s ease-in-out' }}
                                 />
-                                <div className="all_click_icons">
+                                <div className="all_click_icons" style={{ transform: `translate(-47%, -48%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }}>
                                     <Nav.Link eventKey="first" className='sc' onClick={() => handleTabClick('first')}>
                                         sc
                                     </Nav.Link>
