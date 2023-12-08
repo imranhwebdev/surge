@@ -715,14 +715,14 @@ figure.w_i {
 .all_click_icons .sc {
     position: absolute;
     top: 52%;
-    left: 103px;
+    left: 105px;
     width: 84px;
     height: 84px;
-    margin-top: -51px;
+    margin-top: -54px;
     text-align: center;
     line-height: 84px;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 1;
     @include mmd{
         top: 51%;
         left: 28px;
@@ -732,14 +732,14 @@ figure.w_i {
 .all_click_icons .ss {
     position: absolute;
     bottom: 87px;
-    left: 52%;
+    left: 50%;
     width: 84px;
     height: 84px;
-    margin-left: -51px;
+    margin-left: -34px;
     text-align: center;
     line-height: 84px;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 1;
     @include mmd{
         left: 51%;
         bottom: 18px;
@@ -748,15 +748,15 @@ figure.w_i {
 
 .all_click_icons .au {
     position: absolute;
-    top: 51%;
-    right: 79px;
+    top: 50%;
+    right: 80px;
     width: 84px;
     height: 84px;
-    margin-top: -51px;
+    margin-top: -44px;
     text-align: center;
     line-height: 84px;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 1;
     @include mmd{
         top: 51%;
         right: 38px;
@@ -765,15 +765,15 @@ figure.w_i {
 
 .all_click_icons .eff {
     position: absolute;
-    top: 97px;
-    left: 52%;
+    top: 99px;
+    left: 50%;
     width: 84px;
     height: 84px;
-    margin-left: -51px;
+    margin-left: -36px;
     text-align: center;
     line-height: 84px;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 1;
     @include mmd{
         left: 50%;
         top: 20px;

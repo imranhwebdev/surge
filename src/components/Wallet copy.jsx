@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Tab, Nav } from 'react-bootstrap';
 import SectionTitle from './SectionTitle';
-import WalletRightImg from '../assets/img/trading_wallet_right-img2.png';
+import WalletRightImg from '../assets/img/trading_wallet_right-img.png';
 import Eip from '../assets/img/eip.png';
 import key from '../assets/img/key.png';
 import eip_arrow from '../assets/img/eip_arrow.png';
@@ -54,42 +54,42 @@ export default function Wallet() {
         setRotationAngle(newRotationAngle);
     };
 
-    // const customStyles = {
-    //     marginTop: 
-    //         rotationAngle === '0deg' ? '-9px' :
-    //         rotationAngle === '90deg' ? '-20px' :
-    //         rotationAngle === '180deg' ? '15px' :
-    //         rotationAngle === '270deg' ? '21px' : '0px',
+    const customStyles = {
+        marginTop: 
+            rotationAngle === '0deg' ? '-9px' :
+            rotationAngle === '90deg' ? '-20px' :
+            rotationAngle === '180deg' ? '15px' :
+            rotationAngle === '270deg' ? '21px' : '0px',
     
-    //     marginLeft: 
-    //         rotationAngle === '0deg' ? '-12px' :
-    //         rotationAngle === '90deg' ? '7px' :
-    //         rotationAngle === '180deg' ? '10px' :
-    //         rotationAngle === '270deg' ? '-8px' : '0px',            
-    // };
-    // const mediaQueryStyles = {
-    //     '@media (max-width: 992px)': {
-    //         // Apply styles for devices with a maximum width of 992px
-    //         marginTop: 
-    //             rotationAngle === '0deg' ? '-5px' :
-    //             rotationAngle === '90deg' ? '-9px' :
-    //             rotationAngle === '180deg' ? '15px' :
-    //             rotationAngle === '270deg' ? '21px' : '0px',
+        marginLeft: 
+            rotationAngle === '0deg' ? '-12px' :
+            rotationAngle === '90deg' ? '7px' :
+            rotationAngle === '180deg' ? '10px' :
+            rotationAngle === '270deg' ? '-8px' : '0px',            
+    };
+    const mediaQueryStyles = {
+        '@media (max-width: 992px)': {
+            // Apply styles for devices with a maximum width of 992px
+            marginTop: 
+                rotationAngle === '0deg' ? '-5px' :
+                rotationAngle === '90deg' ? '-9px' :
+                rotationAngle === '180deg' ? '15px' :
+                rotationAngle === '270deg' ? '21px' : '0px',
         
-    //         marginLeft: 
-    //             rotationAngle === '0deg' ? '-5px' : 
-    //             rotationAngle === '90deg' ? '-12px' :
-    //             rotationAngle === '180deg' ? '10px' :
-    //             rotationAngle === '270deg' ? '-8px' : '0px',
-    //     },
-    // };
+            marginLeft: 
+                rotationAngle === '0deg' ? '-5px' : 
+                rotationAngle === '90deg' ? '-12px' :
+                rotationAngle === '180deg' ? '10px' :
+                rotationAngle === '270deg' ? '-8px' : '0px',
+        },
+    };
     
 
     const combinedStyles = {
         transform: `rotate(${rotationAngle})`,
         transition: 'transform 0.5s ease-in-out',
-        // ...customStyles, // Include the custom styles
-        // ...mediaQueryStyles,
+        ...customStyles, // Include the custom styles
+        ...mediaQueryStyles,
     };
 
     return (
