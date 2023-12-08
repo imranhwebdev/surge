@@ -273,6 +273,9 @@
             margin-right: -10%;
         }
         max-width: 650px;
+        @include lg {
+            max-width: 475px;
+        }
         @include mmd {
             margin-top: 30px;
             max-width: 500px;
@@ -723,18 +726,30 @@ button.accordion-button {
     }
     &#\39 0deg .ss {
         transform: rotate(-270deg);
+        @include lg{
+            transform: rotate(-90deg) translate(-28px, -29px);
+        }
     }
     &#\39 0deg .eff {
         transform: rotate(270deg);
+        @include lg{
+            transform: rotate(-90deg) translate(-29px, -29px)
+        }
     }
     &#\31 80deg .eff {
         transform: scaleY(-1) translate(-1px, -4px);
     }
     &#\39 0deg .sc {
         transform: rotate(-90deg);
+        @include lg{
+            transform: rotate(-90deg) translate(-30px, -27px);
+        }
     }
     &#\39 0deg .au {
         transform: rotate(-90deg) translate(-4px, -6px);
+        @include lg{
+            transform: rotate(-90deg) translate(-30px, -30px);
+        }
     }
     &#\31 80deg .sc {
         transform: rotate(-180deg) translate(-5px, 0px);
@@ -754,6 +769,8 @@ button.accordion-button {
     &#\32 70deg .eff {
         transform: rotate(90deg);
     }
+
+    
 }
 
 @media(max-width:1200px) and (min-width:992px) {
@@ -777,9 +794,15 @@ figure.w_i {
     line-height: 84px;
     border-radius: 50%;
     opacity: 1;
+    @include lg {
+        top: 52%;
+        left: 90px;
+        width: 35px;
+        height: 35px;
+    }
     @include mmd {
         top: 51%;
-        left: 28px;
+        left: 35px;
     }
 }
 
@@ -794,9 +817,11 @@ figure.w_i {
     line-height: 84px;
     border-radius: 50%;
     opacity: 1;
-    @include mmd {
-        left: 51%;
-        bottom: 18px;
+    @include lg {
+        left: 54.5%;
+        bottom: 102px;
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -810,7 +835,13 @@ figure.w_i {
     text-align: center;
     line-height: 84px;
     border-radius: 50%;
-    opacity: 1;
+    opacity: 1; 
+    @include lg {
+        top: 49.7%;
+        right: 72px;
+        width: 35px;
+        height: 35px;
+    }
     @include mmd {
         top: 51%;
         right: 38px;
@@ -828,6 +859,13 @@ figure.w_i {
     line-height: 84px;
     border-radius: 50%;
     opacity: 1;
+    @include lg {
+        top: 59px;
+        left: 50%;
+        margin-left: -13px;
+        width: 35px;
+        height: 35px;
+    }
     @include mmd {
         left: 50%;
         top: 20px;

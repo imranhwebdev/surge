@@ -29,15 +29,30 @@ export default function Wallet() {
     const [rotationAngle, setRotationAngle] = useState('0deg');
 
     const handleTabClick = (tabKey) => {
-    // Get the current rotation angle
-    const currentRotationAngle = parseInt(rotationAngle, 10);
+        // Set the rotation angle based on the active tab
+        let newRotationAngle = '0deg';
 
-    // Calculate the next rotation angle based on the active tab
-    const newRotationAngle = currentRotationAngle + 90;
+        switch (tabKey) {
+            case 'first':
+                newRotationAngle = '0deg';
+                break;
+            case 'second':
+                newRotationAngle = '90deg';
+                break;
+            case 'third':
+                newRotationAngle = '180deg';
+                break;
+            case 'four':
+                newRotationAngle = '270deg';
+                break;
+            // Add more cases for additional tabs if needed
 
-    // Update the state with the new rotation angle
-    setRotationAngle(`${newRotationAngle}deg`);
-};
+            default:
+                break;
+        }
+
+        setRotationAngle(newRotationAngle);
+    };
 
     
 
