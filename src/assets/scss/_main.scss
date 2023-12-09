@@ -247,6 +247,10 @@
         @include mmd {
             padding: 30px 30px 30px;
         }
+        @include sm {
+           margin: 0 auto;
+           text-align: center;
+        }
         & h3 {
             margin-bottom: 30px;
         }
@@ -254,6 +258,9 @@
             color: $_color_0_70;
             max-width: 387px;
             text-transform: capitalize;
+            @include sm{
+                max-width: 100%;
+            }
         }
         & .inline__btn {
             margin-top: 50px;
@@ -261,6 +268,7 @@
             text-align: center;
             @include sm {
                 min-width: 150px;
+                margin-top: 30px;
             }
         }
     }
@@ -277,12 +285,10 @@
             max-width: 475px;
         }
         @include mmd {
-            margin-top: 30px;
-            max-width: 500px;
+            max-width: 360px;
         }
         @include sm {
-            margin-top: 70px;
-            max-width: 400px;
+            margin:0 auto 30px;
         }
         & img {
             transition: all .3s ease-in-out;
@@ -729,19 +735,31 @@ button.accordion-button {
         @include lg{
             transform: rotate(-90deg) translate(-28px, -29px);
         }
+        @include mmd{
+            transform: rotate(-90deg) translate(-30px, -29px);
+        }
     }
     &#\39 0deg .eff {
         transform: rotate(270deg);
         @include lg{
             transform: rotate(-90deg) translate(-29px, -29px)
         }
+        @include mmd{
+            transform: rotate(-90deg) translate(-31px, -30px)
+        }
     }
     &#\31 80deg .eff {
         transform: scaleY(-1) translate(-1px, -4px);
+        @include mmd{
+            transform: scaleY(-1) translate(-1px, -62px);
+        }
     }
     &#\39 0deg .sc {
         transform: rotate(-90deg);
         @include lg{
+            transform: rotate(-90deg) translate(-30px, -27px);
+        }
+        @include mmd{
             transform: rotate(-90deg) translate(-30px, -27px);
         }
     }
@@ -750,27 +768,48 @@ button.accordion-button {
         @include lg{
             transform: rotate(-90deg) translate(-30px, -30px);
         }
+        @include mmd{
+            transform: rotate(-90deg) translate(-30px, -30px);
+        }
     }
     &#\31 80deg .sc {
         transform: rotate(-180deg) translate(-5px, 0px);
+        @include mmd{
+            transform: rotate(-180deg) translate(-4px, -59px);
+        }
     }
     &#\31 80deg .au {
         transform: scaleY(-1) translate(-1px, -9px);
+        @include mmd{
+            transform: scaleY(-1) translate(-1px, -62px);
+        }
     }
     &#\32 70deg .sc {
         transform: rotate(90deg) translate(0px, -2px);
+        @include mmd{
+            transform: rotate(-270deg) translate(28px, -32px);
+        }
     }
     &#\32 70deg .ss {
         transform: rotate(-90deg) translate(-3px, -3px);
+        
+        @include mmd{
+            transform: rotate(90deg) translate(30px, -32px);
+        }
     }
     &#\32 70deg .au {
         transform: rotate(90deg) translate(4px, -5px);
+        @include mmd{
+            transform: rotate(90deg) translate(31px, -32px);
+        }
     }
     &#\32 70deg .eff {
         transform: rotate(90deg);
+        @include mmd{
+            transform: rotate(90deg) translate(31px, -30px);
+        }
     }
-
-    
+  
 }
 
 @media(max-width:1200px) and (min-width:992px) {
@@ -801,8 +840,10 @@ figure.w_i {
         height: 35px;
     }
     @include mmd {
-        top: 51%;
-        left: 35px;
+        top: 53%;
+        left: 65px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -822,6 +863,12 @@ figure.w_i {
         bottom: 102px;
         width: 35px;
         height: 35px;
+    }
+    @include mmd {
+        left: 56%;
+        bottom: 85px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -843,8 +890,10 @@ figure.w_i {
         height: 35px;
     }
     @include mmd {
-        top: 51%;
-        right: 38px;
+        top: 50%;
+        right: 53px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -867,7 +916,9 @@ figure.w_i {
         height: 35px;
     }
     @include mmd {
-        left: 50%;
-        top: 20px;
+        left: 57%;
+        top: 33px;
+        width: 30px;
+        height: 30px;
     }
 }

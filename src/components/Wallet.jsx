@@ -57,7 +57,7 @@ export default function Wallet() {
             <Container>
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row className='align-items-center'>
-                        <Col md='6'>
+                        <Col md='6' className='order-2 order-md-1'>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
                                     <div className="wallet_single_box">
@@ -89,7 +89,7 @@ export default function Wallet() {
                                 </Tab.Pane>
                             </Tab.Content> 
                         </Col>
-                        <Col md='6'>
+                        <Col md='6' className='order-1 order-md-2'>
                             <figure className='w_i'>
                                 <img
                                     src={WalletRightImg}

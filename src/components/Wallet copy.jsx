@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Row, Tab, Nav } from 'react-bootstrap';
 import SectionTitle from './SectionTitle';
-import WalletRightImg from '../assets/img/trading_wallet_right-img.png';
+import WalletRightImg from '../assets/img/trading_wallet_right-img2.png';
 import Eip from '../assets/img/eip.png';
 import key from '../assets/img/key.png';
 import eip_arrow from '../assets/img/eip_arrow.png';
@@ -29,67 +29,21 @@ export default function Wallet() {
     const [rotationAngle, setRotationAngle] = useState('0deg');
 
     const handleTabClick = (tabKey) => {
-        // Set the rotation angle based on the active tab
-        let newRotationAngle = '0deg';
+    // Get the current rotation angle
+    const currentRotationAngle = parseInt(rotationAngle, 10);
 
-        switch (tabKey) {
-            case 'first':
-                newRotationAngle = '0deg';
-                break;
-            case 'second':
-                newRotationAngle = '90deg';
-                break;
-            case 'third':
-                newRotationAngle = '180deg';
-                break;
-            case 'four':
-                newRotationAngle = '270deg';
-                break;
-            // Add more cases for additional tabs if needed
+    // Calculate the next rotation angle based on the active tab
+    const newRotationAngle = currentRotationAngle + 90;
 
-            default:
-                break;
-        }
+    // Update the state with the new rotation angle
+    setRotationAngle(`${newRotationAngle}deg`);
+};
 
-        setRotationAngle(newRotationAngle);
-    };
-
-    const customStyles = {
-        marginTop: 
-            rotationAngle === '0deg' ? '-9px' :
-            rotationAngle === '90deg' ? '-20px' :
-            rotationAngle === '180deg' ? '15px' :
-            rotationAngle === '270deg' ? '21px' : '0px',
-    
-        marginLeft: 
-            rotationAngle === '0deg' ? '-12px' :
-            rotationAngle === '90deg' ? '7px' :
-            rotationAngle === '180deg' ? '10px' :
-            rotationAngle === '270deg' ? '-8px' : '0px',            
-    };
-    const mediaQueryStyles = {
-        '@media (max-width: 992px)': {
-            // Apply styles for devices with a maximum width of 992px
-            marginTop: 
-                rotationAngle === '0deg' ? '-5px' :
-                rotationAngle === '90deg' ? '-9px' :
-                rotationAngle === '180deg' ? '15px' :
-                rotationAngle === '270deg' ? '21px' : '0px',
-        
-            marginLeft: 
-                rotationAngle === '0deg' ? '-5px' : 
-                rotationAngle === '90deg' ? '-12px' :
-                rotationAngle === '180deg' ? '10px' :
-                rotationAngle === '270deg' ? '-8px' : '0px',
-        },
-    };
     
 
     const combinedStyles = {
         transform: `rotate(${rotationAngle})`,
         transition: 'transform 0.5s ease-in-out',
-        ...customStyles, // Include the custom styles
-        ...mediaQueryStyles,
     };
 
     return (
@@ -103,7 +57,7 @@ export default function Wallet() {
             <Container>
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row className='align-items-center'>
-                        <Col md='6'>
+                        <Col md='6' className='order-2 order-md-1'>
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
                                     <div className="wallet_single_box">
@@ -135,14 +89,14 @@ export default function Wallet() {
                                 </Tab.Pane>
                             </Tab.Content> 
                         </Col>
-                        <Col md='6'>
+                        <Col md='6' className='order-1 order-md-2'>
                             <figure className='w_i'>
                                 <img
                                     src={WalletRightImg}
                                     alt="Wallet Image"
                                     style={combinedStyles}
                                 />
-                                <div className="all_click_icons" style={{ transform: `translate(-50%, -50%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }}>
+                                <div className="all_click_icons" id={rotationAngle} style={{ transform: `translate(-50%, -50%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }}>
                                     <Nav.Link eventKey="first" className='sc' onClick={() => handleTabClick('first')}>
                                         <img src={key} alt="" />
                                     </Nav.Link>
