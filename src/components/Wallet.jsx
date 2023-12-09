@@ -157,7 +157,7 @@ export default function Wallet() {
                                     </Nav.Link>
                                 </div>
                                 <span className='eip'>
-                                    <img src={Eip} style={{ transform: `rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }} alt="" />
+                                    <img src={Eip} alt="" />
                                 </span>
                             </figure>
                         </Col>

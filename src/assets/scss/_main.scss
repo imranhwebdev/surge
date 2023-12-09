@@ -728,7 +728,31 @@ button.accordion-button {
         transform: rotate(270deg);
     }
     &#\31 80deg .eff {
-        transform: scaleY(-1);
+        transform: scaleY(-1) translate(-1px, -4px);
+    }
+    &#\39 0deg .sc {
+        transform: rotate(-90deg);
+    }
+    &#\39 0deg .au {
+        transform: rotate(-90deg) translate(-4px, -6px);
+    }
+    &#\31 80deg .sc {
+        transform: rotate(-180deg) translate(-5px, 0px);
+    }
+    &#\31 80deg .au {
+        transform: scaleY(-1) translate(-1px, -9px);
+    }
+    &#\32 70deg .sc {
+        transform: rotate(90deg) translate(0px, -2px);
+    }
+    &#\32 70deg .ss {
+        transform: rotate(-90deg) translate(-3px, -3px);
+    }
+    &#\32 70deg .au {
+        transform: rotate(90deg) translate(4px, -5px);
+    }
+    &#\32 70deg .eff {
+        transform: rotate(90deg);
     }
 }
 
