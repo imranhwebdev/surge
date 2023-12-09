@@ -142,7 +142,7 @@ export default function Wallet() {
                                     alt="Wallet Image"
                                     style={combinedStyles}
                                 />
-                                <div className="all_click_icons" style={{ transform: `translate(-50%, -50%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }}>
+                                <div className="all_click_icons" id={rotationAngle} style={{ transform: `translate(-50%, -50%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }}>
                                     <Nav.Link eventKey="first" className='sc' onClick={() => handleTabClick('first')}>
                                         <img src={key} alt="" />
                                     </Nav.Link>
@@ -157,7 +157,7 @@ export default function Wallet() {
                                     </Nav.Link>
                                 </div>
                                 <span className='eip'>
-                                    <img src={Eip} alt="" />
+                                    <img src={Eip} style={{ transform: `rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }} alt="" />
                                 </span>
                             </figure>
                         </Col>
