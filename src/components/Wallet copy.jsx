@@ -26,9 +26,12 @@ export default function Wallet() {
     const BtnText4 ='Read More';
     const Btnlink4 ='https://google.com';
 
-    const [rotationAngle, setRotationAngle] = useState('0deg');
 
-    const handleTabClick = (tabKey) => {
+    const [rotationAngle, setRotationAngle] = useState('0deg');
+    const [newClass , setNewClass] = useState(0);
+    const handleTabClick = () => {
+       setNewClass(newClass <= 3 ? newClass+1 : 1);
+       console.log(newClass);
     // Get the current rotation angle
     const currentRotationAngle = parseInt(rotationAngle, 10);
 
@@ -96,7 +99,8 @@ export default function Wallet() {
                                     alt="Wallet Image"
                                     style={combinedStyles}
                                 />
-                                <div className="all_click_icons" id={rotationAngle} style={{ transform: `translate(-50%, -50%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }}>
+                                {/* style={{ transform: `translate(-50%, -50%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }} */}
+                                <div className="all_click_icons" id={newClass} >
                                     <Nav.Link eventKey="first" className='sc' onClick={() => handleTabClick('first')}>
                                         <img src={key} alt="" />
                                     </Nav.Link>

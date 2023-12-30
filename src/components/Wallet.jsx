@@ -29,8 +29,10 @@ export default function Wallet() {
 
     const [rotationAngle, setRotationAngle] = useState('0deg');
     const [newClass , setNewClass] = useState(0);
+    const [fadeEffect, setFadeEffect] = useState(false);
     const handleTabClick = () => {
-       setNewClass(newClass <= 3 ? newClass+1 : 1);
+       setNewClass(newClass <= 3 ? newClass + 1 : 1);
+       setFadeEffect(true);
        console.log(newClass);
     // Get the current rotation angle
     const currentRotationAngle = parseInt(rotationAngle, 10);
@@ -40,13 +42,16 @@ export default function Wallet() {
 
     // Update the state with the new rotation angle
     setRotationAngle(`${newRotationAngle}deg`);
+    setTimeout(() => {
+        setFadeEffect(false);
+    }, 500);
 };
 
     
 
     const combinedStyles = {
         transform: `rotate(${rotationAngle})`,
-        transition: 'transform 0.5s ease-in-out',
+        transition: `transform 0.5s ease-in-out, opacity 0.5s ease-in-out ${fadeEffect ? ', visibility 0s linear 0.5s' : ''}`,
     };
 
     return (
@@ -100,18 +105,18 @@ export default function Wallet() {
                                     style={combinedStyles}
                                 />
                                 {/* style={{ transform: `translate(-50%, -50%) rotate(${rotationAngle})`,  transition: 'transform 0.5s ease-in-out' }} */}
-                                <div className="all_click_icons" id={newClass} >
-                                    <Nav.Link eventKey="first" className='sc' onClick={() => handleTabClick('first')}>
-                                        <img src={key} alt="" />
+                                <div className={`all_click_icons ${fadeEffect ? 'fade' : ''}`} id={newClass} >
+                                    <Nav.Link eventKey="first"  className={`sc ${fadeEffect ? 'fade' : ''}`} onClick={() => handleTabClick('first')}>
+                                        <img src={key} alt="" className={fadeEffect ? 'fade' : ''} />
                                     </Nav.Link>
-                                    <Nav.Link eventKey="second" className='ss' onClick={() => handleTabClick('second')}>
-                                    <img src={eip_arrow} alt="" />
+                                    <Nav.Link eventKey="second" className={`ss ${fadeEffect ? 'fade' : ''}`} onClick={() => handleTabClick('second')}>
+                                    <img src={eip_arrow} alt="" className={fadeEffect ? 'fade' : ''} />
                                     </Nav.Link>
-                                    <Nav.Link eventKey="third" className='au' onClick={() => handleTabClick('third')}>
-                                    <img src={automation} alt="" />
+                                    <Nav.Link eventKey="third" className={`au ${fadeEffect ? 'fade' : ''}`} onClick={() => handleTabClick('third')}>
+                                    <img src={automation} alt="" className={fadeEffect ? 'fade' : ''} />
                                     </Nav.Link>
-                                    <Nav.Link eventKey="four" className='eff' onClick={() => handleTabClick('four')}>
-                                    <img src={self} alt="" />
+                                    <Nav.Link eventKey="four" className={`eff ${fadeEffect ? 'fade' : ''}`} onClick={() => handleTabClick('four')}>
+                                    <img src={self} alt="" className={fadeEffect ? 'fade' : ''} />
                                     </Nav.Link>
                                 </div>
                                 <span className='eip'>
